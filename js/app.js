@@ -2,12 +2,6 @@ var model = {
   currentCat: null,
   cats: [
     {
-      name:'Bluesy',
-      id:'bluesy',
-      img:'img/bluesy.jpg',
-      clickCount: 0,
-    },
-    {
       name:'Baby Blue',
       id:'babyblue',
       img:'img/babyblue.jpg',
@@ -29,6 +23,12 @@ var model = {
       name:'Gingy',
       id:'gingy',
       img:'img/gingy.jpg',
+      clickCount: 0,
+    },
+    {
+      name:'Bluesy',
+      id:'bluesy',
+      img:'img/bluesy.jpg',
       clickCount: 0,
     }
   ]

@@ -1,17 +1,22 @@
-$purple: #4900b7;
-$dpurple: #4e238e;
+$blue: #0071b7;
+$dblue: #005990;
 $gray: #7b7b7b;
+$quicksand: 'Quicksand', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .container {
+  font-family: $quicksand;
   text-align: center;
   .header {
+    margin-top: 10vh;
     h1 {
-      color: $purple;
+      color: $blue;
     }
   }
   .catList {
     .col-md-12 {
-      margin-top: 10px;
+      margin: 10px 0 30px 0;
       li {
         display: inline-block;
         padding: 5px 15px;
@@ -20,10 +25,26 @@ $gray: #7b7b7b;
         color: $gray;
       }
       li:hover {
-        border-bottom: 2px solid $dpurple;
-        color: $dpurple;
+        border-bottom: 2px solid $dblue;
+        color: $dblue;
         cursor: pointer;
       }
+    }
+  }
+  .catView {
+    .col-md-12 {
+      h1 {
+        margin-top: 100px;
+        color: #5a5a5a;
+      }
+      img {
+        box-shadow: 10px 10px 10px #e7e7e7;
+        cursor: pointer;
+      }
+    }
+    #count {
+      margin-top: -120px;
+      color: $dblue;
     }
   }
 }

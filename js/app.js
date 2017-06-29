@@ -81,3 +81,33 @@ var catView = {
     this.catImage.src = currentCat.img;
   }
 };
+
+var catListView = {
+
+  init: function() {
+    this.catListElem = document.getElementById('catList');
+    this.render();
+  },
+
+  render: function() {
+    var cat, elem, i;
+    var cats = octopus.getCats();
+    this.catListElem.innerHTML = '';
+
+    for (i = 0; i < cats.length; i++) {
+      cat = cats[i];
+      elem = document.createElement('li');
+      elem.textContent = cat.name;
+      elem.addEventListener('click', (function(sirCat) {
+        return function() {
+          octopus.setCurrentCat(sirCat);
+          catView.render();
+        };
+      })(cat));
+
+      this.catListElem.appendChild(elem);
+    }
+  }
+};
+
+octopus.init();

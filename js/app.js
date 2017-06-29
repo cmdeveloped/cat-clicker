@@ -33,3 +33,28 @@ var model = {
     }
   ]
 };
+
+var octopus = {
+  init: function() {
+    model.currentCat = model.cats[0];
+    catListView.init();
+    catView.init();
+  },
+
+  getCurrentCat: function() {
+    return model.currentCat;
+  },
+
+  getCats: function() {
+    return model.cats;
+  },
+
+  setCurrentCat: function(cat) {
+    model.currentCat = cat;
+  },
+
+  catCounter: function() {
+    model.currentCat.clickCount++;
+    catView.render();
+  }
+};

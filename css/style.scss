@@ -1,1 +1,29 @@
- 
+$purple: #4900b7;
+$dpurple: #4e238e;
+$gray: #7b7b7b;
+
+.container {
+  text-align: center;
+  .header {
+    h1 {
+      color: $purple;
+    }
+  }
+  .catList {
+    .col-md-12 {
+      margin-top: 10px;
+      li {
+        display: inline-block;
+        padding: 5px 15px;
+        margin: 0 5px;
+        border-bottom: 2px solid transparent;
+        color: $gray;
+      }
+      li:hover {
+        border-bottom: 2px solid $dpurple;
+        color: $dpurple;
+        cursor: pointer;
+      }
+    }
+  }
+}

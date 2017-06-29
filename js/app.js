@@ -58,3 +58,26 @@ var octopus = {
     catView.render();
   }
 };
+
+var catView = {
+
+  init: function() {
+    this.catElem = document.getElementById('cat');
+    this.catName = document.getElementById('name');
+    this.catImage = document.getElementById('image');
+    this.countClicks = document.getElementById('count');
+
+    this.catImage.addEventListener('click', function() {
+      octopus.catCounter();
+    });
+
+    this.render();
+  },
+
+  render: function() {
+    var currentCat = octopus.getCurrentCat();
+    this.countClicks.textContent = currentCat.clickCount;
+    this.catName.textContent = currentCat.name;
+    this.catImage.src = currentCat.img;
+  }
+};
